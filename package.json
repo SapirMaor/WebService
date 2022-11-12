@@ -14,7 +14,8 @@
       "typeorm": "0.3.10"
    },
    "scripts": {
-      "start": "ts-node src/index.ts",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "generate": "ts-node ./node_modules/typeorm/cli.js migration:generate ./src/migration -d ./src/data-source -p",
+      "make-project": "npx typeorm init --name WebService --database postgres --docker",
+      "start": "ts-node src/index.ts"
    }
 }

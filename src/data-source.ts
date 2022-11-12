@@ -8,7 +8,7 @@ export const AppDataSource = new DataSource({
     username: "laptop-c16ghljm\sapir",
     password: null,
     database: "myDB",
-    synchronize: true,
+    synchronize: false,
     logging: false,
     entities: ["entity/*.ts"],
     migrations: [],
