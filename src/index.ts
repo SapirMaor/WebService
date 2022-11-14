@@ -1,6 +1,8 @@
-import { DataSource } from 'typeorm'
+import { AppDataSource } from "./data-source"
 
-DataSource()
-.then(async (connection) => {
-    await connection.runMigrations();
+AppDataSource.initialize().then(async () => {
+    console.log("initializing migrations...");
+    await AppDataSource.runMigrations();
+    console.log("Done!");
+
 }).catch(error => console.log(error))
